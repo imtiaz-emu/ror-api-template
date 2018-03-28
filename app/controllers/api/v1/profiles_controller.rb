@@ -9,7 +9,7 @@ module Api
 
       def update
         if @profile.update(profile_params)
-          render :show
+          render json: @profile
         else
           render json: @profile.errors, status: :unprocessable_entity
         end
