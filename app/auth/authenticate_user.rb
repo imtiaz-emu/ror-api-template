@@ -1,6 +1,6 @@
 class AuthenticateUser
   prepend SimpleCommand
-  attr_accessor :email, :password
+  attr_accessor :email, :password, :remember_me
 
   #this is where parameters are taken when the command is called
   def initialize(email, password)
@@ -10,7 +10,11 @@ class AuthenticateUser
 
   #this is where the result gets returned
   def call
-    JsonWebToken.encode(user_id: user.id) if user
+    if remember_me
+      JsonWebToken.encode(user_id: user.id, expiry_date: 10.days.from_now) if user
+    else
+      JsonWebToken.encode(user_id: user.id) if user
+    end
   end
 
   private
