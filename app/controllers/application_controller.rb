@@ -11,4 +11,8 @@ class ApplicationController < ActionController::API
     render json: { error: 'Not Authorized' }, status: 401 unless @current_user
   end
 
+  def authenticate_admin
+    render json: { error: 'Not Authorized' }, status: 401 unless @current_user.has_role? :admin
+  end
+
 end

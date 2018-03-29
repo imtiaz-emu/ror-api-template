@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180328065254) do
+ActiveRecord::Schema.define(version: 20180329040407) do
+
+  create_table "authors", force: :cascade do |t|
+    t.string "name_en"
+    t.string "name_bn"
+    t.text "short_bio"
+    t.string "photo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "profiles", force: :cascade do |t|
     t.integer "user_id"

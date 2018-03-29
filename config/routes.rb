@@ -10,6 +10,8 @@ Rails.application.routes.draw do
           get 'valid_username'
         end
       end
+
+      resources :authors
     end
   end
 end
