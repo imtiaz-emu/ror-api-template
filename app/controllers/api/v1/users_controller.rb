@@ -4,7 +4,7 @@ module Api
       skip_before_action :authenticate_request, only: %i[login register]
 
       def login
-        authenticate params[:email], params[:password]
+        authenticate params[:email], params[:password], params[:remember_me]
       end
 
       def test
@@ -30,8 +30,8 @@ module Api
         params.permit(:name, :email, :password)
       end
 
-      def authenticate(email, password)
-        command = AuthenticateUser.call(email, password)
+      def authenticate(email, password, remember_me)
+        command = AuthenticateUser.call(email, password, remember_me)
 
         if command.success?
           render json: {

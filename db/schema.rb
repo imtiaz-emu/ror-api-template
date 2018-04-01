@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180329093643) do
+ActiveRecord::Schema.define(version: 20180401051009) do
 
   create_table "authors", force: :cascade do |t|
     t.string "name_en"
@@ -39,6 +39,17 @@ ActiveRecord::Schema.define(version: 20180329093643) do
     t.string "photo"
     t.date "date_of_birth"
     t.string "gender"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "publishers", force: :cascade do |t|
+    t.text "name"
+    t.string "logo"
+    t.text "address"
+    t.string "phone"
+    t.string "proprietor"
+    t.string "discount_range"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

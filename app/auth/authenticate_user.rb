@@ -3,9 +3,10 @@ class AuthenticateUser
   attr_accessor :email, :password, :remember_me
 
   #this is where parameters are taken when the command is called
-  def initialize(email, password)
+  def initialize(email, password, remember_me)
     @email = email
     @password = password
+    @remember_me = remember_me
   end
 
   #this is where the result gets returned
