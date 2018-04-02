@@ -9,6 +9,7 @@ class BookCategory < ApplicationRecord
   # == File Uploader == #
 
   # == Associations and Nested Attributes == #
+  has_and_belongs_to_many :books
 
   # == Validations == #
   validates_presence_of :name

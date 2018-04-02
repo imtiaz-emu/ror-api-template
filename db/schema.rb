@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180401051009) do
+ActiveRecord::Schema.define(version: 20180401074410) do
 
   create_table "authors", force: :cascade do |t|
     t.string "name_en"
@@ -21,9 +21,37 @@ ActiveRecord::Schema.define(version: 20180401051009) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "authors_books", id: false, force: :cascade do |t|
+    t.integer "author_id", null: false
+    t.integer "book_id", null: false
+    t.index ["author_id", "book_id"], name: "index_authors_books_on_author_id_and_book_id"
+  end
+
   create_table "book_categories", force: :cascade do |t|
     t.text "name"
     t.string "cover_photo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "book_categories_books", id: false, force: :cascade do |t|
+    t.integer "book_id", null: false
+    t.integer "book_category_id", null: false
+    t.index ["book_id", "book_category_id"], name: "index_book_categories_books_on_book_id_and_book_category_id"
+  end
+
+  create_table "books", force: :cascade do |t|
+    t.text "name"
+    t.string "isbn"
+    t.string "cover"
+    t.text "description"
+    t.float "price"
+    t.string "price_unit"
+    t.float "avg_rating"
+    t.string "edition"
+    t.integer "no_of_pages"
+    t.string "country"
+    t.integer "publisher_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
