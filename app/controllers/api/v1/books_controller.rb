@@ -49,7 +49,7 @@ class Api::V1::BooksController < ApplicationController
   def book_params
     params.require(:book).permit(:name, :isbn, :cover, :description, :price,
                                  :price_unit, :avg_rating, :edition, :no_of_pages,
-                                 :country, :publisher_id, authors_attributes: [:id, :_destroy],
-                                 book_categories_attributes: [:id, :_destroy])
+                                 :country, :publisher_id, author_ids: [],
+                                 book_category_ids: [])
   end
 end
