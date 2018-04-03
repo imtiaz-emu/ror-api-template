@@ -7,6 +7,7 @@ class Author < ApplicationRecord
   # == Attributes == #
 
   # == File Uploader == #
+  mount_uploader :photo, ProfilePhotoUploader
 
   # == Associations and Nested Attributes == #
   has_and_belongs_to_many :books

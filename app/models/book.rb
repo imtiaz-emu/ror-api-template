@@ -5,6 +5,7 @@ class Book < ApplicationRecord
   # == Constants == #
 
   # == File Uploader == #
+  mount_uploader :cover, CoverPhotoUploader
 
   # == Associations == #
   belongs_to  :publisher, optional: true

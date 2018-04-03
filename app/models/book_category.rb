@@ -7,6 +7,7 @@ class BookCategory < ApplicationRecord
   # == Attributes == #
 
   # == File Uploader == #
+  mount_uploader :cover_photo, CoverPhotoUploader
 
   # == Associations and Nested Attributes == #
   has_and_belongs_to_many :books
