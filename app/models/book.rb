@@ -11,6 +11,7 @@ class Book < ApplicationRecord
   belongs_to  :publisher, optional: true
   has_and_belongs_to_many :book_categories
   has_and_belongs_to_many :authors
+  has_many  :ratings, dependent: :destroy
 
   # == Attributes == #
 

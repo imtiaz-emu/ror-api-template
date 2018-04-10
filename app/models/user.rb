@@ -11,6 +11,7 @@ class User < ApplicationRecord
 
   # == Associations and Nested Attributes == #
   has_one :profile, dependent: :destroy
+  has_many  :ratings, dependent: :destroy
 
   # == Validations == #
   validates_presence_of :email, :password_digest
