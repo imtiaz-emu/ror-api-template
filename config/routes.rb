@@ -14,7 +14,9 @@ Rails.application.routes.draw do
       resources :authors
       resources :book_categories
       resources :publishers
-      resources :books
+      resources :books do
+        resources :ratings, only: [:create, :update, :destroy]
+      end
     end
   end
 end

@@ -5,6 +5,7 @@ class BookSerializer < ActiveModel::Serializer
 
   has_many :authors
   has_many :book_categories
+  has_many :ratings
 
   def publisher
     PublisherSerializer.new(object.publisher).attributes
