@@ -1,0 +1,648 @@
+{
+	"variables": [],
+	"info": {
+		"name": "ror-api",
+		"_postman_id": "7ac1a89b-e4ae-d869-707e-030ea49ea5ec",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Author",
+			"description": "",
+			"item": [
+				{
+					"name": "Author: Create",
+					"request": {
+						"url": "http://localhost:3000/api/v1/authors",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MjIzMDU0MTl9.1W991K-FvUpaZGk2set4NU8evg32iKgW7DJ7xlhJwq4",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"author\": {\n\t\t\"name_en\": \"Humayun Ahmed\"\n\t}\n}"
+						},
+						"description": "Only 'user' with 'admin' role can create/update Author. \n\"name_en\" is mandatory."
+					},
+					"response": []
+				},
+				{
+					"name": "Author: Show",
+					"request": {
+						"url": "http://localhost:3000/api/v1/authors/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MjIzMDU0MTl9.1W991K-FvUpaZGk2set4NU8evg32iKgW7DJ7xlhJwq4",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"author\": {\n\t\t\"name_en\": \"Humayun Ahmed\"\n\t}\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Author: Index",
+					"request": {
+						"url": "http://localhost:3000/api/v1/authors",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MjIzMjQ4MTB9.m5euLktv7Co2OWMwQFEbhh1IzBgEhNVjY4zD_hYinlA",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"author\": {\n\t\t\"name_en\": \"Humayun Ahmed\"\n\t}\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Author: Update",
+					"request": {
+						"url": "http://localhost:3000/api/v1/authors/1",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MjIzMDU0MTl9.1W991K-FvUpaZGk2set4NU8evg32iKgW7DJ7xlhJwq4",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"author\": {\n\t\t\"name_en\": \"Humayun Ahmed\",\n\t\t\"short_bio\": \"Died in 2014\"\n\t}\n}"
+						},
+						"description": "Only 'user' with 'admin' role can create/update Author. \n\"name_en\" is mandatory."
+					},
+					"response": []
+				},
+				{
+					"name": "Author: Delete",
+					"request": {
+						"url": "http://localhost:3000/api/v1/authors/2",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MjIzMjQ4MTB9.m5euLktv7Co2OWMwQFEbhh1IzBgEhNVjY4zD_hYinlA",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BookCategory",
+			"description": "",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"url": "http://localhost:3000/api/v1/book_categories",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MjIzMjQ4MTB9.m5euLktv7Co2OWMwQFEbhh1IzBgEhNVjY4zD_hYinlA",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"book_category\": {\n\t\t\"name\": \"Humayun Ahmed\"\n\t}\n}"
+						},
+						"description": "Only 'user' with 'admin' role can create/update BookCategory. \n\"name\" is mandatory."
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"url": "http://localhost:3000/api/v1/book_categories/1",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MjIzMjQ4MTB9.m5euLktv7Co2OWMwQFEbhh1IzBgEhNVjY4zD_hYinlA",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"book_category\": {\n\t\t\"name\": \"History\"\n\t}\n}"
+						},
+						"description": "Only 'user' with 'admin' role can create/update BookCategory. \n\"name\" is mandatory."
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"url": "http://localhost:3000/api/v1/book_categories/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MjIzMjQ4MTB9.m5euLktv7Co2OWMwQFEbhh1IzBgEhNVjY4zD_hYinlA",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"author\": {\n\t\t\"name_en\": \"Humayun Ahmed\"\n\t}\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Index",
+					"request": {
+						"url": "http://localhost:3000/api/v1/book_categories",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MjIzMjQ4MTB9.m5euLktv7Co2OWMwQFEbhh1IzBgEhNVjY4zD_hYinlA",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"author\": {\n\t\t\"name_en\": \"Humayun Ahmed\"\n\t}\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"url": "http://localhost:3000/api/v1/book_categories/1",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MjIzMjQ4MTB9.m5euLktv7Co2OWMwQFEbhh1IzBgEhNVjY4zD_hYinlA",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Publisher",
+			"description": "",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"url": "http://localhost:3000/api/v1/publishers",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHBpcnlfZGF0ZSI6IjIwMTgtMDQtMTEgMDU6NTk6MjcgVVRDIiwiZXhwIjoxNTIyNTY5NTY3fQ.TGwBxU8eqvuJmEP7tBOek4sOEJZisci8ka0GEGMjK1I",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"publisher\": {\n\t\t\"name\": \"Adarsha\",\n\t\t\"phone\": \"012123213\",\n\t\t\"address\": \"Khilgaon, Dhaka, Bangladesh\"\n\t}\n}"
+						},
+						"description": "Only 'user' with 'admin' role can create/update BookCategory. \n\"name\" is mandatory."
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"url": "http://localhost:3000/api/v1/publishers/1",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHBpcnlfZGF0ZSI6IjIwMTgtMDQtMTEgMDU6NTk6MjcgVVRDIiwiZXhwIjoxNTIyNTY5NTY3fQ.TGwBxU8eqvuJmEP7tBOek4sOEJZisci8ka0GEGMjK1I",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"publisher\": {\n\t\t\"name\": \"Adarsha\",\n\t\t\"phone\": \"012123211\",\n\t\t\"address\": \"Khilgaon, Dhaka, Bangladesh\"\n\t}\n}"
+						},
+						"description": "Only 'user' with 'admin' role can create/update BookCategory. \n\"name\" is mandatory."
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"url": "http://localhost:3000/api/v1/publishers/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHBpcnlfZGF0ZSI6IjIwMTgtMDQtMTEgMDU6NTk6MjcgVVRDIiwiZXhwIjoxNTIyNTY5NTY3fQ.TGwBxU8eqvuJmEP7tBOek4sOEJZisci8ka0GEGMjK1I",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"author\": {\n\t\t\"name_en\": \"Humayun Ahmed\"\n\t}\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Index",
+					"request": {
+						"url": "http://localhost:3000/api/v1/publishers",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHBpcnlfZGF0ZSI6IjIwMTgtMDQtMTEgMDU6NTk6MjcgVVRDIiwiZXhwIjoxNTIyNTY5NTY3fQ.TGwBxU8eqvuJmEP7tBOek4sOEJZisci8ka0GEGMjK1I",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"author\": {\n\t\t\"name_en\": \"Humayun Ahmed\"\n\t}\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"url": "http://localhost:3000/api/v1/publishers/1",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHBpcnlfZGF0ZSI6IjIwMTgtMDQtMTEgMDU6NTk6MjcgVVRDIiwiZXhwIjoxNTIyNTY5NTY3fQ.TGwBxU8eqvuJmEP7tBOek4sOEJZisci8ka0GEGMjK1I",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Book",
+			"description": "",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"url": "http://localhost:3000/api/v1/books",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHBpcnlfZGF0ZSI6IjIwMTgtMDQtMTMgMDk6MDE6MDggVVRDIiwiZXhwIjoxNTIyNzUzMjY4fQ.693f6n52ZwLAkEGkELn45QHjtdEOGWyBn13NJbXt778",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"book\": {\n\t\t\"name\": \"Angels and Demons\",\n\t\t\"isbn\": \"12323012123213\",\n\t\t\"author_ids\": [1],\n\t\t\"publisher_id\": 1\n\t}\n}"
+						},
+						"description": "Only 'user' with 'admin' role can create/update BookCategory. \n\"name\" is mandatory."
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"url": "http://localhost:3000/api/v1/books/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHBpcnlfZGF0ZSI6IjIwMTgtMDQtMTMgMDk6MDE6MDggVVRDIiwiZXhwIjoxNTIyNzUzMjY4fQ.693f6n52ZwLAkEGkELn45QHjtdEOGWyBn13NJbXt778",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"author\": {\n\t\t\"name_en\": \"Humayun Ahmed\"\n\t}\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Index",
+					"request": {
+						"url": "http://localhost:3000/api/v1/books",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHBpcnlfZGF0ZSI6IjIwMTgtMDQtMTMgMDk6MDE6MDggVVRDIiwiZXhwIjoxNTIyNzUzMjY4fQ.693f6n52ZwLAkEGkELn45QHjtdEOGWyBn13NJbXt778",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"author\": {\n\t\t\"name_en\": \"Humayun Ahmed\"\n\t}\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"url": "http://localhost:3000/api/v1/books/1",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHBpcnlfZGF0ZSI6IjIwMTgtMDQtMTMgMDk6MDE6MDggVVRDIiwiZXhwIjoxNTIyNzUzMjY4fQ.693f6n52ZwLAkEGkELn45QHjtdEOGWyBn13NJbXt778",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"url": "http://localhost:3000/api/v1/books/1",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHBpcnlfZGF0ZSI6IjIwMTgtMDQtMTMgMDk6MDE6MDggVVRDIiwiZXhwIjoxNTIyNzUzMjY4fQ.693f6n52ZwLAkEGkELn45QHjtdEOGWyBn13NJbXt778",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"book\": {\n\t\t\"name\": \"Angels and Demons\",\n\t\t\"isbn\": \"12323012123213\",\n\t\t\"author_ids\": [1],\n\t\t\"publisher_id\": 1\n\t}\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Register",
+			"request": {
+				"url": "http://localhost:3000/api/v1/auth/register",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "emu",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "emu@api.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123123",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"url": "http://localhost:3000/api/v1/auth/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "emu@api.com",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "password",
+							"value": "123123",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "remember_me",
+							"value": "true",
+							"type": "text",
+							"description": ""
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Profile: Show",
+			"request": {
+				"url": "http://localhost:3000/api/v1/profiles/1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MjIyMzczMTN9.gfSodvXUnAckCucMrt3edfcIoo_OKAO6b-OY9pRwGDU",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Profile: Update",
+			"request": {
+				"url": "http://localhost:3000/api/v1/profiles/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MjIyMzczMTN9.gfSodvXUnAckCucMrt3edfcIoo_OKAO6b-OY9pRwGDU",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"profile\": { \"first_name\": \"Admin\", \"last_name\": \"Update\", \"phone\": \"12245678\" }}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
