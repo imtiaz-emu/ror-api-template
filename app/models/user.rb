@@ -14,9 +14,9 @@ class User < ApplicationRecord
   has_many  :ratings, dependent: :destroy
 
   # == Validations == #
-  validates_presence_of :email, :password_digest
-  validates :email, uniqueness: true
-  validates :name, presence: true, on: :update, length: { maximum: 20 },
+  validates_presence_of :password_digest
+  validates :email, uniqueness: true, presence: true
+  validates :name, presence: true, length: { minimum: 5, maximum: 25 },
             format: { with: /\A[a-zA-Z0-9]+\z/ },
             uniqueness: { case_sensitive: false }
 
