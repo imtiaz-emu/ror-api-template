@@ -34,9 +34,11 @@ module Api
         command = AuthenticateUser.call(email, password, remember_me)
 
         if command.success?
+          user = User.find_by_email(email).profile
           render json: {
               access_token: command.result,
-              message: 'Login Successful'
+              message: 'Login Successful',
+              user: user
           }
         else
           render json: { error: command.errors }, status: :unauthorized
