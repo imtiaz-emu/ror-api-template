@@ -19,4 +19,8 @@ test:
 
 staging:
   <<: *default
-database: porua
+  database: porua
+
+production:
+  <<: *default
+  database: porua
