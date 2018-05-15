@@ -38,7 +38,7 @@ module Api
           render json: {
               access_token: command.result,
               message: 'Login Successful',
-              user: user
+              profile: ProfileSerializer.new(user).attributes
           }
         else
           render json: { error: command.errors }, status: :unauthorized
