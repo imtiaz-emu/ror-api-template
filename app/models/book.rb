@@ -12,6 +12,7 @@ class Book < ApplicationRecord
   has_and_belongs_to_many :book_categories
   has_and_belongs_to_many :authors
   has_many  :ratings, dependent: :destroy
+  has_many :reviews, as: :reviewable
 
   # == Attributes == #
 
